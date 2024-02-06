@@ -1,0 +1,17 @@
+# This is a YAML file script example
+
+# Define the trigger for the pipeline
+trigger:
+  branches:
+    include:
+      - main  # Trigger the pipeline when changes are made to the main branch
+
+# Define the agent pool to run the pipeline
+pool:
+  vmImage: 'ubuntu-latest'  # Use the latest version of Ubuntu as the agent
+
+# Define the steps to be executed in the pipeline
+steps:
+  - script: echo Hello, world!  # Print "Hello, world!" to the console
+    displayName: 'Print Hello'  # Display name for this step
+
